@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="remove_action.list">
+      <field name="name">remove_action list</field>
+      <field name="model">remove_action.remove_action</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="remove_action.action_window">
+      <field name="name">remove_action window</field>
+      <field name="res_model">remove_action.remove_action</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="remove_action.action_server">
+      <field name="name">remove_action server</field>
+      <field name="model_id" ref="model_remove_action_remove_action"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="remove_action" id="remove_action.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="remove_action.menu_1" parent="remove_action.menu_root"/>
+    <menuitem name="Menu 2" id="remove_action.menu_2" parent="remove_action.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="remove_action.menu_1_list" parent="remove_action.menu_1"
+              action="remove_action.action_window"/>
+    <menuitem name="Server to list" id="remove_action" parent="remove_action.menu_2"
+              action="remove_action.action_server"/>
+-->
+  </data>
+</odoo>
