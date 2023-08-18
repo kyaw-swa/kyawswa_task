@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="quotation_without_debug.list">
+      <field name="name">quotation_without_debug list</field>
+      <field name="model">quotation_without_debug.quotation_without_debug</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="quotation_without_debug.action_window">
+      <field name="name">quotation_without_debug window</field>
+      <field name="res_model">quotation_without_debug.quotation_without_debug</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="quotation_without_debug.action_server">
+      <field name="name">quotation_without_debug server</field>
+      <field name="model_id" ref="model_quotation_without_debug_quotation_without_debug"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="quotation_without_debug" id="quotation_without_debug.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="quotation_without_debug.menu_1" parent="quotation_without_debug.menu_root"/>
+    <menuitem name="Menu 2" id="quotation_without_debug.menu_2" parent="quotation_without_debug.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="quotation_without_debug.menu_1_list" parent="quotation_without_debug.menu_1"
+              action="quotation_without_debug.action_window"/>
+    <menuitem name="Server to list" id="quotation_without_debug" parent="quotation_without_debug.menu_2"
+              action="quotation_without_debug.action_server"/>
+-->
+  </data>
+</odoo>
